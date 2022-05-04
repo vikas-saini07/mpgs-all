@@ -14,6 +14,7 @@ $cardscheme = $_POST['cardscheme'];
 $phone = $_POST['phone'];
 $Email = $_POST['Email'];
 $url = $_POST['endpoint'];
+$authrwurl = $_POST['authrwurl'];
 
 $cardnumber = $_POST['cardnumber'];
 $expiryyear = $_POST['expiryyear'];
@@ -95,7 +96,7 @@ curl_close($curl);
 <label>Language</label><input type="text" id="language" name="language" readonly>
 <label>Height</label><input type="text" id="height" name="height" readonly>
 <label>Width</label><input type="text" id="width" name="width" readonly>
-<label>Authentication RedirectResponseUrl</label><input type="text" name="authrwurl" readonly value="https://ech-10-168-129-136.mastercard.int/mpgstest/directapi/pay.php">
+<label>Authentication RedirectResponseUrl</label><input type="text" name="authrwurl" readonly value="<?php echo $authrwurl?>">
 <input type="submit" value="Authentication Payer API">
 </ul>
 </div>
