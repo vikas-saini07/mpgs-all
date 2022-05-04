@@ -37,6 +37,7 @@ $authtrxid = $trxid;
 <li><label>PAY Transaction ID <span class="required">*</span></label><input type="text" name="paytrxid" value="<?php echo $paytrxid?>"></li>
 <li><label>Authentication Order ID <span class="required">*</span></label><input type="text" name="ordid" value="<?php echo $ordid?>"></li>
 <li><label>Authentication Transaction ID<span class="required">*</span></label><input type="text" name="authtrxid" value="<?php echo $authtrxid?>"></li>
+<li><label>End Point<span class="required">*</span></label><input type="text" name="endpoint" value="https://test-gateway.mastercard.com/api/nvp/version/63"></li>
 <li><input type="submit" value="Submit Pay API"></li>
 </ul>
 </form>
