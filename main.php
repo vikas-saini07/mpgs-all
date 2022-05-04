@@ -5,6 +5,7 @@ $merchant = $_POST['merchant'];
 $apiUsername = "merchant.$merchant";
 $apiversion = $_POST['apiversion'];
 $endpoint = $_POST['endpoint'];
+$authrwurl = $_POST['authrwurl'];
 $url = "https://" . $endpoint . "/api/nvp/version/" . $apiversion;
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -55,6 +56,7 @@ curl_close($curl);
 <label>Session Version</label><input type="text" name="sessionversion" readonly value="<?php echo $json['session_version']?>">
 <label>Session AES 256 Key</label><input type="text" name="sessionaeskey" readonly value="<?php echo $json['session_aes256Key']?>">
 <label>Session Update Status</label><input type="text" name="sessionstatus" readonly value="<?php echo $json['session_updateStatus']?>">
+<label>Authentication RedirectResponseUrl</label><input type="text" name="authrwurl" readonly value="<?php echo $authrwurl?>">
 <input type="submit" value="Update Session API">
 </ul>
 
