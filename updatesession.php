@@ -13,6 +13,7 @@ $description = $_POST['description'];
 $phone = $_POST['phone'];
 $Email = $_POST['Email'];
 $url = $_POST['endpoint'];
+$authrwurl = $_POST['authrwurl'];
 
 $cardnumber = $_POST['cardnumber'];
 $expiryyear = $_POST['expiryyear'];
@@ -24,7 +25,7 @@ $txn_id = date("YYmdHis");
 $order_id = date("YmdHis");
 $order_ref = date("YYmdHis");
 
-$rwurl="https://ech-10-168-129-136.mastercard.int/mpgstest/directapi/pay.php";
+$rwurl = $authrwurl;
 
 $curl = curl_init();
 $curl = curl_init();
@@ -80,6 +81,7 @@ curl_close($curl);
 <label>Order Currency</label><input type="text" name="currency" readonly value="<?php echo $json['order_currency']?>">
 <label>Transaction Id</label><input type="text" name="trxid" readonly value="<?php echo $json['transaction_id']?>">
 <label>Order ID</label><input type="text" name="ordid" readonly value="<?php echo $json['order_id']?>">
+<label>Authentication RedirectResponseUrl</label><input type="text" name="authrwurl" readonly value="<?php echo $authrwurl?>">
 <input type="submit" value="Initiate Authentication API">
 </ul>
 </div>
