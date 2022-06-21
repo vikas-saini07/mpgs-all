@@ -52,7 +52,7 @@ curl_close($curl);
     <head>
         <script src="<?php echo $jsurl ?>"
                 data-error="errorCallback"
-                data-complete="<?php echo $complete ?>"
+                data-complete="<?php echo $rwurl ?>"
                 data-cancel="cancelCallback">
         </script>
 
