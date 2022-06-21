@@ -14,7 +14,8 @@ $order_id = date("YmdHis");
 $txn_id = "TESTIDD" . date("YYmdHis");
 $currency = $_POST['currency'];
 $order_ref = date("YYmdHis");
-$timeout = "https://ech-10-168-129-136.mastercard.int/mpgstest/hostedchkout/timeout.html";
+$timeout = "https://mpgstests.herokuapp.com/hostedchkout/oldhosted/timeout.html";
+$complete = "https://mpgstests.herokuapp.com/hostedchkout/oldhosted/complete.html";
 $ct = new DateTime();
 $ct->modify("+7 day");
 $paylink_exp = $ct->format('Y-m-d\TH:i:s.\1\0\0\0\Z');
@@ -51,6 +52,7 @@ curl_close($curl);
     <head>
         <script src="<?php echo $jsurl ?>"
                 data-error="errorCallback"
+                data-complete="<?php echo $complete ?>"
                 data-cancel="cancelCallback">
         </script>
 
