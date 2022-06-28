@@ -19,7 +19,7 @@ $name = $amount = $description = $phone = $Email = $ssurl = $jsurl = $rwurl = $a
 <li><label>Currency <span class="required">*</span></label><input type="text" name="currency" value="AUD" ></li>
 <li><label>Description <span class="required">*</span></label><input type="text" name="description" value="test" ></li>
 <li><label>Phone<span class="required">*</span></label><input type="number" name="phone" value="0468372014"></li>
-<li><label>Email<span class="required">*</span></label><input type="text" name="Email" value="vikas.saini@mastercard.com"></li>
+<li><label>Email<span class="required">*</span></label><input type="text" name="Email" value="test123456789@mastercard.com"></li>
 <li><input type="submit" value="Checkout"></li>
 </ul>
 </form>
