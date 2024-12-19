@@ -3,7 +3,8 @@
 $apipassword = $_POST['apipassword'];
 $merchant = $_POST['merchant'];
 $apiUsername = "merchant.$merchant";
-$gwurl = "https://" . $_POST['gwurl'] . "/api/nvp/version/100";
+$apiversion = $_POST['$apiversion'];
+$gwurl = "https://" . $_POST['gwurl'] . "/api/nvp/version/" .  $apiversion;
 $jsurl = "https://" . $_POST['gwurl'] . "/static/checkout/checkout.min.js";
 $rwurl = $_POST['rwurl'];
 $amount = $_POST['amount'];
